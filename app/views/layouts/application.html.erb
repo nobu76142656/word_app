@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WordApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- ここからパーシャル -->
+    
+    <!--　ヘッダー　-->
+    <%= render 'layouts/header' %>
+    
+    <%= yield %>
+    
+    <!-- 正誤flash -->
+    <br>
+    <% flash.each do |message_type, message| %>
+      <!--<%= message_type %>-->
+      <%= message %>
+    <% end %>
+    
+  </body>
+</html>

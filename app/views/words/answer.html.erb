@@ -1,0 +1,20 @@
+<p>words/answer</p>
+
+<p>解答一覧</p>
+
+
+<table style="text-align: left">
+  <tr>
+    <th >単語</th><th>意味</th>
+  </tr>
+  <% @words.each do |word| %>
+  <tr>
+    <td><%= word.english %></td>
+    <td><%= word.japanese %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+
+<%= debug(params) if Rails.env.development? %>
