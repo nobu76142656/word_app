@@ -2,7 +2,9 @@ require 'test_helper'
 
 class WordsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get words_index_url
+    get root_url
+    get answer_url
+    
     assert_response :success
   end
 
