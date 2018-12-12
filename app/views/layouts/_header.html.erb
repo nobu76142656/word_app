@@ -1,6 +1,17 @@
-<h1>英単語暗記アプリ</h1>
-   <%= link_to "問題画面", root_url %>
- | <%= link_to "解答一覧", '/answer' %>
- | <%= link_to "ユーザー登録", '/users/new' %>
- | <%= link_to "ユーザー一覧", users_path %>
-<hr noshade>
+
+<%#= link_to "問題画面", root_url %>
+<!-- | <%#= link_to "解答一覧", '/answer' %>-->
+<!-- | <%#= link_to "ユーザー登録", '/users/new' %>-->
+<!-- | <%#= link_to "ユーザー一覧", users_path %>-->
+<!--<hr noshade>-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top role="navigation">
+  <div class="container-fluid">
+    <h1>英単語暗記app</h1>
+    <a class="navbar-brand" href="/">問題画面</a>
+    <a class="navbar-brand" href="/answer">解答一覧</a>
+    <a class="navbar-brand" href="/users/new">ユーザー登録</a>
+    <a class="navbar-brand" href="/users/index">ユーザー一覧</a>
+    <a class="navbar-brand" href="/users/index">ログイン</a>
+  </div>
+</nav>

@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WordApp</title>
+    <title>Word_App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
-  <div class="container">
-    <body>
-  
-      <!-- ここからパーシャル -->
-      
-      <!--　ヘッダー　-->
-      
-      <%= render 'layouts/header' %>
-      
-      <%= yield %>
-      
-      <!-- 正誤flash -->
-      <br>
-      <% flash.each do |message_type, message| %>
-        <!--<%= message_type %>-->
-        <%= message %>
-      <% end %>
-      
-    </body>
-  </div>
+
+  <body>
+    <div class="container" id="outer-frame">
+      <div class="container-fluid">
+
+        <!-- ここからパーシャル -->
+        <!--　ヘッダー　-->
+        <%= render 'layouts/header' %>
+
+        <%= yield %>
+
+        <!-- 正誤flash -->
+        <br>
+        <% flash.each do |message_type, message| %>
+          <!--<%= message_type %>-->
+          <%= message %>
+        <% end %>
+      </div>
+    </div>
+  </body>
 </html>
