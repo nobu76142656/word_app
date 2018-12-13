@@ -14,22 +14,19 @@
   
 
   <body>
-    <div class="container" id="outer-frame">
-      <div class="container-fluid">
+    <%= render 'layouts/header' %>
 
-        <!-- ここからパーシャル -->
-        <!--　ヘッダー　-->
-        <%= render 'layouts/header' %>
 
-        <%= yield %>
-
-        <!-- 正誤flash -->
-        <br>
-        <% flash.each do |message_type, message| %>
-          <!--<%= message_type %>-->
-          <%= message %>
-        <% end %>
-      </div>
+    <div class="container">
+      <%= yield %>
     </div>
+
+    <!-- 正誤flash -->
+    <br>
+    <% flash.each do |message_type, message| %>
+      <!--<%= message_type %>-->
+      <%= message %>
+    <% end %>
+
   </body>
 </html>
