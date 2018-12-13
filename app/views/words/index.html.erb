@@ -1,7 +1,7 @@
 
 <div class="jumbotron">
   <% r = random_send %>
-  <p><%= @words[r]['english'] %></p>
+  <p><b><%= @words[r]['english'] %></b></p>
   <p>単語の意味を答えてください</p>
   <%= form_tag('/words/comparison', method: :get) do %>
 
@@ -9,6 +9,7 @@
 
     <input name="answer" id="answer_column"><br>
 
+    <br>
     <input type="submit" value="  答える  ">
   <% end %>
 

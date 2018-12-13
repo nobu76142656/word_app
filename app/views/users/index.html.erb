@@ -1,12 +1,14 @@
+
+
 <div class="jumbotron">
 
-  <table>
-    <tr>
-      <th>名前</th><th>パスワード</th>
+  <table class="table">
+    <tr bgcolor="silver">
+      <th>名前</th><th>メールアドレス</th>
     </tr>
     <% @users.each do |user| %>
     <tr>
-      <td><%= user.name %></td><td><%= user.password %></td>
+      <td><%= user.name %></td><td><%= user.email %></td>
     </tr>
     <% end %>
   </table>
