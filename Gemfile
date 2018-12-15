@@ -66,3 +66,7 @@ gem 'bootstrap_form'
 
 gem 'minitest'
 gem 'websocket-driver'
+gem 'jquery-rails',    '4.3.1'
+gem 'jquery-ui-rails'
+
+gem 'bootstrap-will_paginate', '1.0.0'

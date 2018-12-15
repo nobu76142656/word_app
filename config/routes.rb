@@ -1,4 +1,4 @@
-# https://railstutorial.jp/chapters/sign_up?version=5.1#sec-signup_form
+# https://railstutorial.jp/chapters/basic_login?version=5.1#sec-login_form
 
 Rails.application.routes.draw do
 
@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get  '/words/comparison', to: 'words#comparison'
   get  '/answer',           to: 'words#answer'
 
+  get    '/login',  to: 'sessions#new'
+  post   '/login',  to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
   resources :users
   resources :words
 end
-
