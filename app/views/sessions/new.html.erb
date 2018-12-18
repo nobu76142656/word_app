@@ -11,6 +11,12 @@
         <%= f.label :password, "パスワード" %>
         <%= f.password_field :password, class: 'form-control' %>
 
+        <%# params[:session][:remember_me]に0か1を入れる %>
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>PCにログイン情報を保存する</span>
+        <% end %>
+
         <br>
         <%= f.submit "ログイン", class: "btn btn-primary" %>
 

@@ -1,4 +1,5 @@
-# https://railstutorial.jp/chapters/basic_login?version=5.1#sec-login_form
+# https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-remember_me_checkbox
+#
 
 Rails.application.routes.draw do
 
