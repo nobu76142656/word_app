@@ -22,6 +22,7 @@ module SessionsHelper
   # end
 
   # 上記を永続セッションに対応させる
+  # 現在ログイン中のユーザーを@current_userに入れる
   def current_user
     # log_inメソッドでsession[:user_id]にuser.idを代入してログイン状態にしていれば
     if session[:user_id]

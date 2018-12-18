@@ -16,7 +16,7 @@ class User < ApplicationRecord
   # digestにはハッシュ化（元に戻せないので暗号化ではない）されたpasswordが入る。
 
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6}
+  validates :password, presence: true, length: { minimum: 6}, allow_nil: true
 
   # 渡された文字列のハッシュ値を返す
   def User.digest(string)
@@ -51,7 +51,7 @@ class User < ApplicationRecord
   # 渡されたtokenがdigestと一致したらtrueを返す
   # ここでのremember_tokenはアクセラのremember_tokenとは別のローカル変数。
   def authenticated?(remember_token)
-    digestが存在しない場合は処理を終了
+    # digestが存在しない場合は処理を終了
     return false if remember_token
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end

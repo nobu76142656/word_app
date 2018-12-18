@@ -1,4 +1,4 @@
-# https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-remember_me_checkbox
+# https://railstutorial.jp/chapters/updating_and_deleting_users?version=5.1#sec-requiring_the_right_user
 #
 
 Rails.application.routes.draw do
