@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      remember user
-      redirect_to user
+      # ログインを促した後に飛ばす
+      redirect_back_or user
     else
       # エラーメッセージを作成
       flash.now[:danger] = 'メールアドレスまたはパスワードが間違っています'

@@ -22,5 +22,8 @@ class WordsController < ApplicationController
     @words = Word.all
   end
 
+  def timeMeasure
+  end
+
 
 end

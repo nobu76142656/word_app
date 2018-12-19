@@ -8,6 +8,7 @@
         <li><%= link_to "問題画面",    root_url %></li>
         <li><%= link_to "解答一覧",    answer_url %></li>
         <li><%= link_to "ユーザー登録", new_user_url %></li>
+        <li><%= link_to "ユーザー一覧", users_url %></li>
 
 
         <% if logged_in? %>
@@ -16,7 +17,7 @@
               アカウント <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "ユーザー一覧", users_url %></li>
+
               <li><%= link_to "ユーザー詳細", current_user %></li>
               <li><%= link_to "編集", edit_user_path(current_user) %></li>
               <li class="divider"></li>

@@ -62,6 +62,30 @@ module SessionsHelper
     @current_user = nil
   end
 
+  # フレンドリーフォワーディングの実装：
+  # ログインしていないユーザーが編集ページにアクセスすると、自分のプロフィールページに飛ばされる。
+  # そうではなく、ログインを促しログインした後はその前に行こうとしていたページに飛ばす。
+
+
+  # 記録しておいたURLもしくはデフォルト値にリダイレクト
+  # SessionsControllerのcreateで呼び出される
+  def redirect_back_or(default)
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
+  # アクセスしようとしたURLを覚えておく
+  # request:アクセスした情報を取得:getかどうか？
+  # getであればアクセスしようとしていたoriginal_urlをsessionハッシュに記録
+  # users_controllerのeditとupdateの時に実行されるログインしてるか確認する
+  # logged_in_userメソッドで実行される
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
+
+
+
+
   #------------------------------------------------------------
   # current_userに関する2つの目立たないバグ
   # https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-two_subtle_bugs
