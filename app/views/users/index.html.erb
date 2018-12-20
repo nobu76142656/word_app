@@ -9,14 +9,21 @@
       </tr>
       <% end %>
     </table> -->
-
-<%= will_paginate %>
+    <%# Railsは@userをUserオブジェクトのリストであると推測する。さらに、ユーザーのコレクション
+    を与えて呼び出すと、Railsは自動的にユーザーのコレクションを列挙しそれぞれのユーザーを
+    パーシャルで出力する。 %>
+    <%# <% @users.each do |user| %>
 
 <p>ユーザー一覧</p>
+<%= will_paginate %>
 <ul class="users">
   <% @users.each do |user| %>
     <li>
       <%= link_to user.name, user %>
+      <% if current_user.admin? && !current_user?(user) %>
+      | <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      <% end %>
     </li>
   <% end %>
 </ul>
