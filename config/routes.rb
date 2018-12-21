@@ -1,4 +1,4 @@
-# https://railstutorial.jp/chapters/updating_and_deleting_users?version=5.1#sec-partial_refactoring
+# https://railstutorial.jp/chapters/account_activation?version=5.1#cha-account_activation
 #
 
 # 送信メールプレビュー
@@ -27,3 +27,17 @@ Rails.application.routes.draw do
   resources :users
   resources :words
 end
+
+# cap11 メールでのアカウント有効化
+#
+# 1, 有効化トークンと有効化digestを関連付ける。
+# 2, 有効化トークンをユーザーにメールする。
+# 3, ユーザーがそのリンクをクリックすると有効化できるようにする。
+
+# 上記を実装する段取り
+# 1, ユーザーの初期状態はunactivatedにする
+# 2, ユーザー登録が行われた時、activation_tokenとactivation_digestを生成
+# 3, activation_digestはDBに保存し、　activation_tokenはメールで送る。
+# 4, ユーザーがメールのリンクをクリックしたら、メールアドレスをキーにしてユーザーを探し、
+#    DB内にあるactivation_digestと比較し、認証する。
+# 5, ユーザーを認証できたら有効化済み(activated)にする。
