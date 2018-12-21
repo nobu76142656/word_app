@@ -1,4 +1,4 @@
-# https://railstutorial.jp/chapters/account_activation?version=5.1#cha-account_activation
+# https://railstutorial.jp/chapters/account_activation?version=5.1#sec-activating_the_account
 #
 
 # 送信メールプレビュー
@@ -7,7 +7,7 @@
 # ブラウザに付け足すURL
 # /rails/mailers/user_mailer/account_activation
 # /rails/mailers/user_mailer/password_reset
-# 送信メールプレビュー部分だけは実装。その他実装していない。
+
 
 # boolen型のカラム、adminなどを作るとrailsでは自動的に論理値を返すadmin?メソッドが使える。
 
@@ -26,8 +26,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :words
+  resources :account_activation, only: [:edit]
 end
 
+# tips
 # cap11 メールでのアカウント有効化
 #
 # 1, 有効化トークンと有効化digestを関連付ける。

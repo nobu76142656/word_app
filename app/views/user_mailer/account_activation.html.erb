@@ -1,5 +1,30 @@
-<h1>User#account_activation</h1>
+
+<!--
+tips
+railsサーバーでユーザーをメールアドレスで検索して有効化トークンを認証できるようにするので
+リンクにはメールアドレスとactivation_tokenを含める。
+edit_account_activation_url(@user.activation_token)
+は
+edit_user_url(user)
+が
+http://www.example.com/users/1/edit
+を表すことにあてはまると
+http://www.example.com/account_activations/q5lt38hQDc_959PVoo6b7A/edit
+となる。さらに、urlの最後に?を追加し、それ以降にキーと値のペアを付けた形は以下となる。
+account_activations/q5lt38hQDc_959PVoo6b7A/edit?email=foo%40example.com
+
+これをリンクで表記するとすると、
+edit_account_activation_url(@user.activation_token, email: @user.email)
+となる。
+-->
+
+<h1>Sample App</h1>
+
+<p>こんにちは <%= @user.name %>,</p>
 
 <p>
-  <%= @greeting %>, find me in app/views/user_mailer/account_activation.html.erb
+  sample_appにようこそ! アカウント認証リンクをクリックして下さい。
 </p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

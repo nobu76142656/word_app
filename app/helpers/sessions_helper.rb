@@ -13,6 +13,7 @@ module SessionsHelper
     cookies.permanent[:remember_token] = user.remember_token
   end
 
+  # tips
   # 現在ログイン中のユーザーを返す（いる場合）
   # 一時セッションにしか対応していない
   # def current_user
@@ -79,6 +80,7 @@ module SessionsHelper
     session.delete(:forwarding_url)
   end
 
+  # tips
   # アクセスしようとしたURLを覚えておく
   # request:アクセスした情報を取得:getかどうか？
   # getであればアクセスしようとしていたoriginal_urlをsessionハッシュに記録
@@ -90,7 +92,7 @@ module SessionsHelper
 
 
 
-
+  # tips
   #------------------------------------------------------------
   # current_userに関する2つの目立たないバグ
   # https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-two_subtle_bugs
