@@ -1,4 +1,4 @@
-# https://railstutorial.jp/chapters/account_activation?version=5.1#sec-activating_the_account
+# https://railstutorial.jp/chapters/account_activation?version=5.1#sec-generalizing_the_authenticated_method
 #
 
 # 送信メールプレビュー
