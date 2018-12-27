@@ -42,7 +42,7 @@ module SessionsHelper
       # user.idをキーとしてユーザーを検索
       user = User.find_by(id: cokies.signed[:user_id])
       # 検索の結果userがいて、かつ、authenticated?でtrueが返ったら
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end

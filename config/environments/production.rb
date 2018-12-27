@@ -14,9 +14,10 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
-  # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
-  # config.require_master_key = true
+  # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
+  # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
+  # `config/secrets.yml.key`.
+  config.read_encrypted_secrets = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -38,16 +39,13 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
-  # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
-
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -61,8 +59,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "word_app_#{Rails.env}"
-
+  # config.active_job.queue_name_prefix = "sample_app_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
@@ -91,4 +88,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  
+  # チュートリアル
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = 'https://word-app-heroku.herokuapp.com' # ここだけ変える
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'], # ここは変えない
+    :password       => ENV['SENDGRID_PASSWORD'], # ここは変えない
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
 end

@@ -53,15 +53,32 @@ class User < ApplicationRecord
 
   # 渡されたtokenがdigestと一致したらtrueを返す
   # ここでのremember_tokenはアクセラのremember_tokenとは別のローカル変数。
-  def authenticated?(remember_token)
-    # digestが存在しない場合は処理を終了
-    return false if remember_token
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  # def authenticated?(remember_token)
+  #   # digestが存在しない場合は処理を終了
+  #   return false if remember_token
+  #   BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  # end
+
+  # 11.3.1 authenticated?メソッドの抽象化のために上記メソッドを改良
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
   end
 
   # ユーザーのログイン情報を破棄する
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  # アカウントを有効にする
+  def activate
+    update_columns(activated: true, activated_at: Time.zone.now)
+  end
+
+  # 有効化用のメールを送信する
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
   end
 
   private
@@ -77,3 +94,5 @@ class User < ApplicationRecord
     end
 
 end
+
+
