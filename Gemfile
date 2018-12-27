@@ -22,7 +22,6 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker'
 gem 'coffee-rails',            '4.2.2'
 
-
 # gem 'mini_magick', '~> 4.8'
 # gem 'capistrano-rails', group: :development
 # gem 'redis', '~> 4.0'

@@ -61,7 +61,12 @@ class User < ApplicationRecord
 
   # 11.3.1 authenticated?メソッドの抽象化のために上記メソッドを改良
   def authenticated?(attribute, token)
+    # digestが存在しない（nil）の場合(2つのブラウザで片方でログアウトした時など)
+    # falseを返す。returunで即座にメソッドを終了している。
+    
+    # sendを使って抽象化
     digest = send("#{attribute}_digest")
+    
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password?(token)
   end

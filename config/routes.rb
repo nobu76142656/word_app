@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get  '/result',           to: 'words#result'
 
 
-
+  root   'users#index'
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
