@@ -18,15 +18,14 @@ Rails.application.routes.draw do
   get  '/answer',           to: 'words#answer'
   get  '/result',           to: 'words#result'
 
-
-  root   'users#index'
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  # resourcesは全て複数形となる！！
   resources :users
   resources :words
-  resources :account_activation, only: [:edit]
+  resources :account_activations, only: [:edit]
 end
 
 # tips
@@ -43,3 +42,24 @@ end
 # 4, ユーザーがメールのリンクをクリックしたら、メールアドレスをキーにしてユーザーを探し、
 #    DB内にあるactivation_digestと比較し、認証する。
 # 5, ユーザーを認証できたら有効化済み(activated)にする。
+
+
+# tips
+# メールの送信内容について：
+#
+# railsサーバーでユーザーをメールアドレスで検索して有効化トークンを認証できるようにする
+# のでリンクにはメールアドレスとactivation_tokenを含める。
+# edit_account_activation_url(@user.activation_token)
+# は
+# edit_user_url(user)
+# が
+# http://www.example.com/users/1/edit
+# を表すことにあてはまると
+# http://www.example.com/account_activations/q5lt38hQDc_959PVoo6b7A/edit
+# となる。さらに、urlの最後に?を追加し、それ以降にキーと値のペアを付けた形は以下となる。
+# account_activations/q5lt38hQDc_959PVoo6b7A/edit?email=foo%40example.com
+
+# これをリンクで表記するとすると、
+# edit_account_activation_url(@user.activation_token, email: @user.email)
+# となる。
+

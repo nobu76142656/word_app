@@ -83,7 +83,17 @@ class User < ApplicationRecord
 
   # 有効化用のメールを送信する
   def send_activation_email
-    UserMailer.account_activation(self).deliver_now
+    # UserMailer.account_activation(self).deliver_now
+    # チュートリアル通りの上記の書き方ではメール文が（日本語？）base64でエンコーディングされてしまった。
+    # cloud9ではこのような現象は起きなかった。
+
+    # メール送信でエラーが出る時
+    # Content-Transfer-Encoding: base64 となってしまう時
+    # http://d.hatena.ne.jp/takahashim/20101201/p1
+
+    mail = UserMailer.account_activation(self)
+    mail.transport_encoding = "8bit"
+    mail.deliver
   end
 
   private
