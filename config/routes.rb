@@ -1,5 +1,8 @@
+# https://railstutorial.jp/chapters/password_reset?version=5.1#cha-password_reset
+# 12章から
+
 # https://railstutorial.jp/chapters/account_activation?version=5.1#sec-generalizing_the_authenticated_method
-#
+# 11.3.1 authenticated?メソッドの抽象化 を復習
 
 # 送信メールプレビュー
 # /sample_app/config/environments/development.rb

@@ -6,13 +6,14 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      if user.activated?
+      if user.activated? # ユーザーが有効化されていたらtrueで、ログインする。
         log_in user
+        # 1は永続化チェックボックスにチェックされているか ? true : false を実行
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         redirect_back_or user
       else
         message  = "アカウントはまだ有効ではありません。 "
-        message += "送られたメールを確認して下さい"
+        message += " 送られたメールを確認して下さい。"
         flash[:warning] = message
         redirect_to root_url
       end

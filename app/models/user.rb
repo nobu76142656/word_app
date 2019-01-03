@@ -84,7 +84,8 @@ class User < ApplicationRecord
   # 有効化用のメールを送信する
   def send_activation_email
     # UserMailer.account_activation(self).deliver_now
-    # チュートリアル通りの上記の書き方ではメール文が（日本語？）base64でエンコーディングされてしまった。
+    # チュートリアル通りの上記の書き方ではメール文が（日本語？）base64でエンコーディングされて
+    # しまった。
     # cloud9ではこのような現象は起きなかった。
 
     # メール送信でエラーが出る時
@@ -109,5 +110,85 @@ class User < ApplicationRecord
     end
 
 end
+
+# tips
+# 11.3.1 authenticated?メソッドの抽象化
+#
+# activation_tokenとemailをそれぞれparams[:id]とparams[:email]として参照できる。
+# activation_tokenは、
+# http://www.example.com/account_activations/q5lt38hQDc_959PVoo6b7A/edit
+# としてidのように扱われているために、params[:id]として参照できる。
+#
+# 次のようなコードでユーザーを検索して認証する。
+# user = User.find_by(email: params[:email])
+# if user && user.authenticated?(:activation, params[:id])
+# 
+# 上のコードで使っているauthenticated?メソッドはアカウント有効化のdigestと渡されたtokenが
+# （引数:activationにdigestを渡す）一致するかを検証する。
+# ただし、この下記メソッドはremember_tokenようなのでactivationでは使えない。
+
+# tokenがdigestと一致したらtrueを返す
+
+# def authenticated?(remember_token)
+#   return false if remember_digest.nil?
+#   BCrypt::Password.new(remember_digest).is_password?(remember_token)
+# end
+
+# BCryptを使ってcookies[:remember_token]がremember_digestと一致するか確認。
+# is_password?は==の再定義。一致しているか確認している。
+
+# remember_digestはUserモデル属性なので、モデル内では
+# self.remember_digest と書ける。
+
+# 上記コードのrememberの部分を変数として扱いたい。状況に応じて切り替えたい。
+
+#
+# 受け取ったパラメータに応じて呼び出すメソッドを切り替える手法を使う。【メタプログラミング】
+#
+
+# railsコンソールを開き、Rubyオブジェクトに対してsendメソッドを実行して配列の長さを取るとする
+# a = [1, 2, 3]
+# a.length
+# =>3
+# a.send(:length)
+# =>3
+# a.send("length")
+# =>3
+
+# この時sendを通して渡したシンボル:lengthや文字列"length"はいずれもlenghtメソッドと同じ
+# 結果となる。どちらもオブジェクトにlengthメソッドを渡しているため等価。
+
+# もう一つの例
+# user = User.first
+# user.activation_digest
+# =>"$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKR
+# user.send(:activation_digest)
+# =>"$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKR
+# user.send("activation_digest")
+# =>"$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKR
+# attribute = :acrivation
+# user.send("#{attribute}_digest")
+# =>"$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKR
+
+# 文字列の式展開によって引数を組み立てsendに渡している。
+
+# 文字列'activation'でも同じことができるが、Rubyではシンボルを使う方が一般的。
+
+#
+# sendメソッドの動作原理がわかったので、これを使ってauthenticated?メソッドを書き換える。
+#
+
+# def authenticated?(remember_token)
+#   digest = self.send("remember_digest")
+#   return false if digest.nil?
+#   BCrpt::Password.new(digest).is_password?(remember_token)
+# end
+
+# 上記コードの各引数を一般化し、文字列を式展開する。sendの前のselfは省略できる。
+# def authenticated?(attribute, token)
+#   digest = send("#{attribute}_digest")
+#   return false if digest.nil?
+#   BCrypt::Password.new(digest).is_password?(token)
+# end
 
 
