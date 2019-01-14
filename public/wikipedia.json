@@ -1,0 +1,104 @@
+{
+  "batchcomplete": "",
+  "continue": {
+    "sroffset": 10,
+    "continue": "-||"
+  },
+  "query": {
+    "searchinfo": {
+      "totalhits": 956
+    },
+    "search": [
+      {
+        "ns": 0,
+        "title": "JavaScript",
+        "pageid": 2028,
+        "size": 29842,
+        "wordcount": 3079,
+        "snippet": "<span class=\"searchmatch\">JavaScript</span>\uff08\u30b8\u30e3\u30d0\u30b9\u30af\u30ea\u30d7\u30c8\uff09\u3068\u306f\u3001\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u8a00\u8a9e\u306e\u3072\u3068\u3064\u3067\u3042\u308b\u3002Java\u3068\u540d\u524d\u304c\u4f3c\u3066\u3044\u308b\u304c\u3001\u5168\u304f\u7570\u306a\u308b\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u8a00\u8a9e\u3067\u3042\u308b\uff08\u5f8c\u8ff0\u306e#\u6b74\u53f2\u3092\u53c2\u7167\uff09\u3002 <span class=\"searchmatch\">JavaScript</span>\u306f\u30d7\u30ed\u30c8\u30bf\u30a4\u30d7\u30d9\u30fc\u30b9\u306e\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u6307\u5411\u30b9\u30af\u30ea\u30d7\u30c8\u8a00\u8a9e\u3067\u3042\u308b\u304c\u3001\u30af\u30e9\u30b9\u306a\u3069\u306e\u30af\u30e9\u30b9\u30d9\u30fc\u30b9\u306b\u898b\u3089\u308c\u308b\u6a5f\u80fd\u3082\u53d6\u308a\u8fbc\u3093\u3067\u3044\u308b\u3002",
+        "timestamp": "2019-01-10T10:43:16Z"
+      },
+      {
+        "ns": 0,
+        "title": "KJS",
+        "pageid": 139940,
+        "size": 1568,
+        "wordcount": 76,
+        "snippet": "KJS\u306fKDE\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u306e<span class=\"searchmatch\">JavaScript</span>\u30a4\u30f3\u30bf\u30d7\u30ea\u30bf\u3067\u3042\u308b\u3002Web\u4e0a\u3060\u3051\u3067\u306a\u304fKDE/Qt\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u3068\u30d0\u30a4\u30f3\u30c7\u30a3\u30f3\u30b0\u3057\u305f\u308a\u3001\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u3092\u4f5c\u6210\u3059\u308b\u3053\u3068\u3082\u3067\u304d\u308b\u3002 \u30a2\u30c3\u30d7\u30eb\u306e\u30a6\u30a7\u30d6\u30d6\u30e9\u30a6\u30b6Safari\u306e\u30a8\u30f3\u30b8\u30f3WebKit\u3067KHTML\u3068\u3068\u3082\u306b\u63a1\u7528\u3055\u308c\u3066\u3044\u308b\u3002\u307e\u305f\u3001WebKit\u306eJav",
+        "timestamp": "2016-10-04T13:39:55Z"
+      },
+      {
+        "ns": 0,
+        "title": "Prototype JavaScript Framework",
+        "pageid": 1820808,
+        "size": 8088,
+        "wordcount": 372,
+        "snippet": "Prototype <span class=\"searchmatch\">JavaScript</span> Framework \u306f\u3001Sam Stephenson \u304c\u958b\u767a\u3057\u305f<span class=\"searchmatch\">JavaScript</span>\u30d5\u30ec\u30fc\u30e0\u30ef\u30fc\u30af\u3067\u3042\u308a\u3001Ajax\u30d5\u30ec\u30fc\u30e0\u30ef\u30fc\u30af\u3084\u305d\u306e\u4ed6\u306e\u30e6\u30fc\u30c6\u30a3\u30ea\u30c6\u30a3\u3092\u63d0\u4f9b\u3059\u308b\u3002prototype.js \u3068\u3044\u3046\u540d\u524d\u306e1\u3064\u306e<span class=\"searchmatch\">JavaScript</span>\u30d5\u30a1\u30a4\u30eb\u3067\u5b9f\u88c5\u3055\u308c\u3066\u3044\u308b\u3002\u5358\u72ec\u3067\u3082\u5165\u624b\u3067\u304d\u308b\u304c\u3001Ruby",
+        "timestamp": "2016-06-21T11:33:37Z"
+      },
+      {
+        "ns": 0,
+        "title": "Google V8 JavaScript Engine",
+        "pageid": 1547444,
+        "size": 4035,
+        "wordcount": 326,
+        "snippet": "Google V8 <span class=\"searchmatch\">JavaScript</span> Engine\u306f\u3001Google\u304c\u958b\u767a\u3059\u308b\u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u306eJIT Virtual Machine\u578b\u306e<span class=\"searchmatch\">JavaScript</span>\u5b9f\u884c\u30a8\u30f3\u30b8\u30f3\u3067\u3042\u308b\u3002\u6587\u8108\u306b\u3088\u3063\u3066\u306f\u3001\u5358\u306bV8\u3068\u547c\u79f0\u3055\u308c\u308b\u304c\u3001\u3053\u306e\u540d\u524d\u306f\u540c\u3058\u304f\u300cV8\u300d\u3068\u7565\u3055\u308c\u308bV\u578b8\u6c17\u7b52\u30a8\u30f3\u30b8\u30f3\u306b\u7531\u6765\u3057\u3066\u3044\u308b\u3002Google",
+        "timestamp": "2018-12-24T09:13:26Z"
+      },
+      {
+        "ns": 0,
+        "title": "Narcissus",
+        "pageid": 924342,
+        "size": 1059,
+        "wordcount": 104,
+        "snippet": "Narcissus(\u30ca\u30eb\u30b7\u30b5\u30b9) \u3068\u306f\u3001<span class=\"searchmatch\">JavaScript</span>\u3067\u66f8\u304b\u308c\u305f\u3001\u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u306e<span class=\"searchmatch\">JavaScript</span>\u30a8\u30f3\u30b8\u30f3\u3002 Netscape Navigator 2.0\u7528\u306b\u3001<span class=\"searchmatch\">JavaScript</span>\u3092\u521d\u3081\u3066\u958b\u767a\u3057\u305f\u3001\u30d6\u30ec\u30f3\u30c0\u30f3\u30fb\u30a2\u30a4\u30af\u306b\u3088\u3063\u3066\u66f8\u304b\u308c\u305f\u3002 Narcissus\u306f\u305d\u308c\u81ea\u8eab\u304c<span class=\"searchmatch\">JavaScript</span>",
+        "timestamp": "2017-09-09T16:24:56Z"
+      },
+      {
+        "ns": 0,
+        "title": "JavaScript\u30e9\u30a4\u30d6\u30e9\u30ea",
+        "pageid": 3890490,
+        "size": 3622,
+        "wordcount": 368,
+        "snippet": "<span class=\"searchmatch\">JavaScript</span>\u30e9\u30a4\u30d6\u30e9\u30ea\u3068\u306f\u3001<span class=\"searchmatch\">JavaScript</span>\u30d9\u30fc\u30b9\u306e\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u3092\u66f8\u304d\u3084\u3059\u304f\u3059\u308b\u305f\u3081\u306b\u3042\u3089\u304b\u3058\u3081\u66f8\u304b\u308c\u305f<span class=\"searchmatch\">JavaScript</span>\u306e\u30e9\u30a4\u30d6\u30e9\u30ea\u306e\u3053\u3068\u3067\u3042\u308b\u3002\u7279\u306b\u3001AJAX\u306a\u3069\u306e\u30a6\u30a7\u30d6\u4e2d\u5fc3\u306e\u6280\u8853\u3067\u6d3b\u7528\u3055\u308c\u3066\u3044\u308b\u3002 <span class=\"searchmatch\">JavaScript</span>\u306f\u3001\u6700\u521d\u306bNetscape\uff08\u306e\u3061\u306eMozilla\uff09\u3067\u958b\u767a",
+        "timestamp": "2019-01-11T07:17:56Z"
+      },
+      {
+        "ns": 0,
+        "title": "Rhino",
+        "pageid": 609531,
+        "size": 2288,
+        "wordcount": 220,
+        "snippet": "Rhino\uff08\u30e9\u30a4\u30ce\u30fc\uff09\u3068\u306f\u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u3067\u958b\u767a\u3055\u308c\u3066\u3044\u308b<span class=\"searchmatch\">JavaScript</span>\u306e\u5b9f\u88c5\u3067\u3042\u308b\u3002Rhino\u306fJava\u3067\u8a18\u8ff0\u3055\u308c\u3066\u304a\u308a\u3001Mozilla Foundation\u306b\u3088\u3063\u3066\u7ba1\u7406\u3001\u914d\u5e03\u3055\u308c\u3066\u3044\u308b\u3002Mozilla Foundation\u3067\u306f\u3001C\u8a00\u8a9e\u306b\u3088\u308b\u5b9f\u88c5\u306eSpiderMonkey\u3068\u3044\u3046\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u306e\u63d0\u4f9b\u3082\u884c\u3063\u3066\u3044\u308b\u3002",
+        "timestamp": "2018-08-10T07:22:14Z"
+      },
+      {
+        "ns": 0,
+        "title": "SpiderMonkey",
+        "pageid": 1599753,
+        "size": 5016,
+        "wordcount": 441,
+        "snippet": "SpiderMonkey(\u30b9\u30d1\u30a4\u30c0\u30fc\u30e2\u30f3\u30ad\u30fc) \u306f\u4e16\u754c\u521d\u306e<span class=\"searchmatch\">JavaScript</span>\u30a8\u30f3\u30b8\u30f3\u306e\u30b3\u30fc\u30c9\u540d\u3002\u30d6\u30ec\u30f3\u30c0\u30f3\u30fb\u30a2\u30a4\u30af\u304c\u30cd\u30c3\u30c8\u30b9\u30b1\u30fc\u30d7\u30b3\u30df\u30e5\u30cb\u30b1\u30fc\u30b7\u30e7\u30f3\u30ba\u3067\u958b\u767a\u3057\u3001\u5f8c\u306b\u30aa\u30fc\u30d7\u30f3\u30bd\u30fc\u30b9\u3068\u3057\u3066\u30ea\u30ea\u30fc\u30b9\u3055\u308c\u3001\u73fe\u5728[\u3044\u3064?]\u306f Mozilla Foundation \u304c\u4fdd\u5b88\u3057\u3066\u3044\u308b\u3002 SpiderMonkey",
+        "timestamp": "2018-12-08T11:39:51Z"
+      },
+      {
+        "ns": 0,
+        "title": "JavaScript Object Notation",
+        "pageid": 689610,
+        "size": 12657,
+        "wordcount": 1485,
+        "snippet": "JSON\uff08\u30b8\u30a7\u30a4\u30bd\u30f3\u3001<span class=\"searchmatch\">JavaScript</span> Object Notation\uff09\u306f\u8efd\u91cf\u306a\u30c7\u30fc\u30bf\u8a18\u8ff0\u8a00\u8a9e\u306e1\u3064\u3067\u3042\u308b\u3002\u69cb\u6587\u306f<span class=\"searchmatch\">JavaScript</span>\u306b\u304a\u3051\u308b\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u306e\u8868\u8a18\u6cd5\u3092\u30d9\u30fc\u30b9\u3068\u3057\u3066\u3044\u308b\u304c\u3001JSON\u306f<span class=\"searchmatch\">JavaScript</span>\u5c02\u7528\u306e\u30c7\u30fc\u30bf\u5f62\u5f0f\u3067\u306f\u6c7a\u3057\u3066\u306a\u304f\u3001\u69d8\u3005\u306a\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u3084\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u8a00\u8a9e\u9593\u306b\u304a\u3051\u308b\u30c7",
+        "timestamp": "2018-12-22T18:06:26Z"
+      },
+      {
+        "ns": 0,
+        "title": "Dart",
+        "pageid": 2446240,
+        "size": 6606,
+        "wordcount": 565,
+        "snippet": "\u30c7\u30f3\u30de\u30fc\u30af\u306e\u30aa\u30fc\u30d5\u30b9\u3067\u958b\u50ac\u3055\u308c\u305f\u300cGOTO\u30ab\u30f3\u30d5\u30a1\u30ec\u30f3\u30b9\u300d\u3067\u516c\u958b\u3055\u308c\u305f\u3002\u3053\u306e\u8a00\u8a9e\u306f\u3001\u30a6\u30a7\u30d6\u30d6\u30e9\u30a6\u30b6\u7d44\u307f\u8fbc\u307f\u306e\u30b9\u30af\u30ea\u30d7\u30c8\u8a00\u8a9e\u3067\u3042\u308b<span class=\"searchmatch\">JavaScript</span>\u306e\u4ee3\u66ff\u3068\u306a\u308b\u3053\u3068\u3092\u76ee\u7684\u306b\u4f5c\u3089\u308c\u305f\u3002 Dart\u8a00\u8a9e\u306f<span class=\"searchmatch\">JavaScript</span>\u8a00\u8a9e\u306b\u3042\u308b\u89e3\u6c7a\u3067\u304d\u306a\u3044\u8a00\u8a9e\u4e0a\u306e\u554f\u984c\u70b9\u3092\u89e3\u6c7a\u3057\u3001\u306a\u304a\u304b\u3064\u3001\u3088\u308a\u512a\u308c\u305f\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u3092\u767a\u63ee\u3057\u3001\u5927\u898f\u6a21\u306a\u30d7\u30ed\u30b8",
+        "timestamp": "2018-08-09T07:31:39Z"
+      }
+    ]
+  }
+}
